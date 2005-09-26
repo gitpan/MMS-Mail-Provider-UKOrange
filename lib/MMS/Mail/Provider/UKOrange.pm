@@ -13,11 +13,11 @@ MMS::Mail::Provider::UKOrange - This provides a class for parsing an MMS::Mail::
 
 =head1 VERSION
 
-Version 0.01
+Version 0.02
 
 =cut
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 =head1 SYNOPSIS
 
@@ -96,11 +96,19 @@ sub parse {
     return undef;
   }
 
+  my $skiptext = "This Orange Multi Media Message was sent wirefree";
+
   my $parsed = new MMS::Mail::Message::Parsed($message);
+
+  $parsed->header_subject($message->header_subject);
 
   foreach my $element (@{$parsed->attachments}) {
     if ($element->mime_type eq 'text/plain') {
-      $parsed->body_text($element->bodyhandle->as_string);
+      if ($element->bodyhandle->as_string ne "") {
+        if ($element->bodyhandle->as_string !~ /$skiptext/m) {
+          $parsed->body_text($element->bodyhandle->as_string);
+        }
+      }
     } elsif ($element->mime_type =~ /jpeg$/) {
       $parsed->add_image($element);
     } elsif ($element->mime_type =~ /avi$/) {
@@ -109,7 +117,7 @@ sub parse {
   }
 
   # Set mobile number property to a VALID number
-  $parsed->phone_number($self->retrieve_phone_number($parsed->from));
+  $parsed->phone_number($self->retrieve_phone_number($parsed->header_from));
   return $parsed;
 }
 
