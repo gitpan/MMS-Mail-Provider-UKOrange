@@ -13,11 +13,11 @@ MMS::Mail::Provider::UKOrange - This provides a class for parsing an MMS::Mail::
 
 =head1 VERSION
 
-Version 0.02
+Version 0.03
 
 =cut
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 =head1 SYNOPSIS
 
@@ -31,7 +31,7 @@ The following are the top-level methods of the MMS::Mail::Parser::0range class.
 
 =over
 
-=item new()
+=item C<new()>
 
 Return a new MMS::Mail::Provider::0range object.
 
@@ -41,9 +41,9 @@ Return a new MMS::Mail::Provider::0range object.
 
 =over
 
-=item parse MMS::Mail::Message
+=item C<parse> MMS::Mail::Message
 
-The parse method is called as an instance method.  It parses the MMS::Mail::Message object and returns an MMS::Mail::Message::Parsed object.
+The C<parse> method is called as an instance method.  It parses the MMS::Mail::Message object and returns an MMS::Mail::Message::Parsed object.
 
 =back
 
@@ -61,7 +61,7 @@ your bug as I make changes.
 
 =head1 NOTES
 
-To quote the perl artistic license ('perldoc perlartistic') :
+Please read the Perl artistic license ('perldoc perlartistic') :
 
 10. THIS PACKAGE IS PROVIDED "AS IS" AND WITHOUT ANY EXPRESS OR IMPLIED
     WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES
@@ -82,7 +82,7 @@ under the same terms as Perl itself.
 
 =head1 SEE ALSO
 
-L<MMS::Mail::Message>, L<MMS::Mail::Message::Parsed>, L<MMS::Mail::Provider>, L<MMS::Mail::Provider>
+L<MMS::Mail::Message>, L<MMS::Mail::Message::Parsed>, L<MMS::Mail::Provider>
 
 
 =cut

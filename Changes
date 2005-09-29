@@ -1,5 +1,7 @@
 Revision history for MMS-Mail-Provider-UKOrange
 
+0.03	28-Sep-2005 / 11:30
+	Improved pod by adding formatting codes
 0.02    26-Sep-2005 / 12:30
 	Added a $skiptext variable to not include mime parts of type text/plain that include $skiptext
 	Modified retrieve_phone_number to use header_from property instead of from to relect removal of this property from MMS::Message::Parsed class
