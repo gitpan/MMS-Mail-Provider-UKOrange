@@ -13,11 +13,11 @@ MMS::Mail::Provider::UKOrange - This provides a class for parsing an MMS::Mail::
 
 =head1 VERSION
 
-Version 0.03
+Version 0.04
 
 =cut
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 =head1 SYNOPSIS
 
@@ -49,7 +49,7 @@ The C<parse> method is called as an instance method.  It parses the MMS::Mail::M
 
 =head1 AUTHOR
 
-Rob Lee, C<< <robl@robl.co.uk> >>
+Rob Lee, C<< <robl at robl.co.uk> >>
 
 =head1 BUGS
 
@@ -98,7 +98,7 @@ sub parse {
 
   my $skiptext = "This Orange Multi Media Message was sent wirefree";
 
-  my $parsed = new MMS::Mail::Message::Parsed($message);
+  my $parsed = new MMS::Mail::Message::Parsed(message=>$message);
 
   $parsed->header_subject($message->header_subject);
 

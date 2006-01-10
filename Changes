@@ -1,5 +1,9 @@
 Revision history for MMS-Mail-Provider-UKOrange
 
+0.04	09-Jan-2006 / 16:07
+	Improved pod
+	Updated README
+	Updated to use new MMS::Mail::Message::Parsed interface
 0.03	28-Sep-2005 / 11:30
 	Improved pod by adding formatting codes
 0.02    26-Sep-2005 / 12:30
