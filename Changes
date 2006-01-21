@@ -1,5 +1,7 @@
 Revision history for MMS-Mail-Provider-UKOrange
 
+0.05    13-Jan-2005 / 17:50
+        Updated dependancies to include version numbers for MMS classes
 0.04	09-Jan-2006 / 16:07
 	Improved pod
 	Updated README
