@@ -13,11 +13,11 @@ MMS::Mail::Provider::UKOrange - This provides a class for parsing an MMS::Mail::
 
 =head1 VERSION
 
-Version 0.05
+Version 0.06
 
 =cut
 
-our $VERSION = '0.05';
+our $VERSION = '0.06';
 
 =head1 SYNOPSIS
 
@@ -111,7 +111,7 @@ sub parse {
       }
     } elsif ($element->mime_type =~ /jpeg$/) {
       $parsed->add_image($element);
-    } elsif ($element->mime_type =~ /avi$/) {
+    } elsif ($element->mime_type =~ /^video/) {
       $parsed->add_video($element);
     }
   }

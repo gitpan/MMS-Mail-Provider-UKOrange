@@ -3,7 +3,7 @@ NAME
     MMS::Mail::Message object that has been sent via the UK Orange network.
 
 VERSION
-    Version 0.05
+    Version 0.06
 
 SYNOPSIS
     This class provides a parse method for parsing an MMS::Mail::Message
